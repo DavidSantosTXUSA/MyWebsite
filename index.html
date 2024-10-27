@@ -9,43 +9,73 @@
 <body>
     <header>
         <h1>David Santos</h1>
-        <p>Software Engineer | Programmer | Web Developer | Personal Trainer |</p>
+        <p>Software Engineer | Programmer | Web Developer | Personal Trainer</p>
     </header>
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
         </ul>
     </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I’m David Santos, a Student majoring in software engineering at UTD with experience in various programming languages and technologies. I enjoy programming and fitness!</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java, C, C++, Python</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>SQL, MIPS Assembly Language</li>
-            <li>Agile Methodologies, Linux, Operating Systems</li>
-            <li>NASM personal trainer certified</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="mailto:dsantos4148@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    
+    <main>
+        <section id="about" class="active">
+            <h2>About Me</h2>
+            <p>Hello! I’m David Santos, a Software Engineering student at the University of Texas at Dallas, expected to graduate in May 2026. With a GPA of 3.32, I have a strong foundation in software engineering principles and hands-on experience with various programming languages and technologies.</p>
+            <p>My coursework includes Data Structures & Algorithms, Systems Programming in UNIX, Database Systems, Operating Systems Concepts, among others. I'm passionate about both software development and cybersecurity, I actively engage in UTD's Cybersecurity Club and AWS Club to enhance my learning.</p>
+            <p>In addition to my academic pursuits, I work as a personal trainer at Body20, where I design personalized workout plans for clients, contributing to a motivating training environment. Outside of work and studies, I enjoy powerlifting and am an active member of the Powerlifting Club at UTD.</p>
+        </section>
+        
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Simple iOS Workout App</h3>
+                    <p>October 2024 - Present</p>
+                    <p>Developed a user-friendly iOS app for tracking workouts, including features to create/delete workouts, log duration, track sets/reps, and view progress over time. Integrated a workout history deletion feature to remove accidental sessions.</p>
+                    <a href="https://github.com/DavidSantosTXUSA/MyWorkoutApp" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Phishing Detector Using Google Safe Browsing API</h3>
+                    <p>September 2024</p>
+                    <p>Created a phishing detection tool that utilizes the Google Safe Browsing API to identify suspicious URLs. Gained experience in cybersecurity protocols and API integration, ensuring seamless communication with Google's threat database.</p>
+                    <a href="https://github.com/DavidSantosTXUSA/DavidSantosTXUSA-Phishing-Detector-Using-Google-Safe-Browsing-API" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Discord Moderation Bot</h3>
+                    <p>September 2024</p>
+                    <p>Built a Python-based Discord bot to help server admins enforce banned words in chat. Integrated MongoDB for database management, achieving a 100% detection accuracy, thus improving moderation efficiency.</p>
+                    <a href="https://github.com/DavidSantosTXUSA/MyDiscordBot" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out via my socials or email!</p>
+            <form id="contactForm" onsubmit="sendEmail(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <div class="social-media">
+                <h3>Connect with me on social media:</h3>
+                <a href="https://instagram.com/david.santos776" target="_blank" class="social-link instagram">Instagram</a>
+                <a href="https://www.linkedin.com/in/david-santos-a38a9b283/" target="_blank" class="social-link linkedin">LinkedIn</a>
+                <a href="https://github.com/DavidSantosTXUSA" target="_blank" class="social-link github">GitHub</a>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 David Santos. All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
