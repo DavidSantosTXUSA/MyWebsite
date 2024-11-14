@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Santos - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>David Santos</h1>
+        <p>Software Engineer | Programmer | Web Developer | Personal Trainer</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="about" class="active">
+            <h2>About Me</h2>
+            <p>NEW PORTFOLIO THIS ONE IS OUTDATED: https://www.davidsantos.dev/</p>
+            <p>Hello! I’m David Santos, a Software Engineering student at the University of Texas at Dallas, expected to graduate in Decemember 2025. With a GPA of 3.275, I have a strong foundation in software engineering principles and hands-on experience with various programming languages and technologies.</p>
+            <p>My coursework includes Data Structures & Algorithms, Systems Programming in UNIX, Database Systems, Operating Systems Concepts, among others. I'm passionate about both software development and cybersecurity, I actively engage in UTD's Cybersecurity Club and AWS Club to enhance my learning.</p>
+            <p>In addition to my academic pursuits, I work as a personal trainer at Body20, where I design personalized workout plans for clients, contributing to a motivating training environment. Outside of work and studies, I enjoy powerlifting and am an active member of the Powerlifting Club at UTD.</p>
+        </section>
+        
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3></h3>
+                    <p>Nov 2024 - Present</p>
+                    <p>New portfolio website! Go check it out to visit my recent projects and current updates!</p>
+                    <a href="https://www.davidsantos.dev/" target="_blank">Vist by clicking this link!/a>
+                </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>iOS Workout App</h3>
+                    <p>October 2024 - Present</p>
+                    <p>Developed a user-friendly iOS app for tracking workouts, including features to create/delete workouts, log duration, track sets/reps, and view progress over time. Integrated a workout history deletion feature to remove accidental sessions.</p>
+                    <a href="https://github.com/DavidSantosTXUSA/MyWorkoutApp" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Phishing Detector Using Google Safe Browsing API</h3>
+                    <p>September 2024</p>
+                    <p>Created a phishing detection tool that utilizes the Google Safe Browsing API to identify suspicious URLs. Gained experience in cybersecurity protocols and API integration, ensuring seamless communication with Google's threat database.</p>
+                    <a href="https://github.com/DavidSantosTXUSA/DavidSantosTXUSA-Phishing-Detector-Using-Google-Safe-Browsing-API" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Discord Moderation Bot</h3>
+                    <p>September 2024</p>
+                    <p>Built a Python-based Discord bot to help server admins enforce banned words in chat. Integrated MongoDB for database management, achieving a 100% detection accuracy, thus improving moderation efficiency.</p>
+                    <a href="https://github.com/DavidSantosTXUSA/MyDiscordBot" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out via my socials or email!</p>
+            <form id="contactForm" onsubmit="sendEmail(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <div class="social-media">
+                <h3>Connect with me on social media:</h3>
+                <a href="https://instagram.com/david.santos776" target="_blank" class="social-link instagram">Instagram</a>
+                <a href="https://www.linkedin.com/in/david-santos-a38a9b283/" target="_blank" class="social-link linkedin">LinkedIn</a>
+                <a href="https://github.com/DavidSantosTXUSA" target="_blank" class="social-link github">GitHub</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 David Santos. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
